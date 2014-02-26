@@ -10,6 +10,9 @@
 #include "reverse.h"
 #include "rmRepeats.h"
 
+#include "e.h"
+#include "d_cmd.h"
+
 // print the elements in the array, up to (but not including) the first
 // NULL entry
 void printLines(char** a) {
@@ -29,6 +32,8 @@ commandMap map[] = {
   {"-t", trimm},
   {"-r", reverseLines},
   {"-i", rmRepeats},
+  {"-e", e},
+  {"-d", d_cmd},
   {NULL, NULL},
 };
 
