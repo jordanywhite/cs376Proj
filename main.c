@@ -5,6 +5,8 @@
 #include "readLine.h"
 #include "execCmds.h"
 #include "cap.h"
+#include "reverse.h"
+#include "rmRepeats.h"
 
 // print the elements in the array, up to (but not including) the first
 // NULL entry
@@ -21,6 +23,8 @@ commandMap map[] = {
   {"-p", printLines},
   {"-u", toUpperCase},
   {"-t", trimm},
+  {"-r", reverseLines},
+  {"-i", rmRepeats},
   {NULL, NULL},
 };
 
