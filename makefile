@@ -1,12 +1,7 @@
+prog: main.o readLine.o execCmds.o reverse.o rmRepeats.o sortStrcmp.o
+	gcc -o prog main.o readLine.o execCmds.o reverse.o rmRepeats.o sortStrcmp.o 
 
-prog: main.o readLine.o execCmds.o sortStrcmp.o sortLength.o
-	gcc -o prog main.o readLine.o execCmds.o sortStrcmp.o sortLength.o
-
-main.o: main.c readLine.h execCmds.h sortStrcmp.h sortLength.h
-prog: main.o readLine.o execCmds.o reverse.o rmRepeats.o
-	gcc -o prog main.o readLine.o execCmds.o reverse.o rmRepeats.o
-
-main.o: main.c readLine.h execCmds.h reverse.h rmRepeats.h
+main.o: main.c readLine.h execCmds.h reverse.h rmRepeats.h sortStrcmp.h sortLength.h
 	gcc -c main.c
 
 reverse.o:	reverse.c
