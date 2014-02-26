@@ -6,6 +6,8 @@
 #include "execCmds.h"
 #include "sortStrcmp.h"
 #include "sortLength.h"
+#include "reverse.h"
+#include "rmRepeats.h"
 
 // print the elements in the array, up to (but not including) the first
 // NULL entry
@@ -21,6 +23,8 @@ commandMap map[] = {
   {"-p", printLines},
   {"-s", sortStrcmp},
   {"-l", sortLength},
+  {"-r", reverseLines},
+  {"-i", rmRepeats},
   {NULL, NULL},
 };
 
