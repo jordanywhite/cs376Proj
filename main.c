@@ -7,6 +7,8 @@
 #include "e.h"
 #include "d_cmd.h"
 #include "execCmds.h"
+#include "reverse.h"
+#include "rmRepeats.h"
 
 // print the elements in the array, up to (but not including) the first
 // NULL entry
@@ -20,8 +22,13 @@ void printLines(char** a) {
 // our array that tells how command-strings map to functions
 commandMap map[] = {
   {"-p", printLines},
+
   {"-d", d_cmd},
   {"-e", e_cmd},
+
+  {"-r", reverseLines},
+  {"-i", rmRepeats},
+
   {NULL, NULL},
 };
 
