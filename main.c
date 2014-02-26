@@ -6,6 +6,7 @@
 #include "execCmds.h"
 #include "sortStrcmp.h"
 #include "sortLength.h"
+#include "cap.h"
 #include "reverse.h"
 #include "rmRepeats.h"
 
@@ -20,9 +21,12 @@ void printLines(char** a) {
 
 // our array that tells how command-strings map to functions
 commandMap map[] = {
+  {"-rr", reverses},
   {"-p", printLines},
   {"-s", sortStrcmp},
   {"-l", sortLength},
+  {"-u", toUpperCase},
+  {"-t", trimm},
   {"-r", reverseLines},
   {"-i", rmRepeats},
   {NULL, NULL},
