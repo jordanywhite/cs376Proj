@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include "readLine.h"
+
+#include "e.h"
+#include "d_cmd.h"
 #include "execCmds.h"
 #include "sortStrcmp.h"
 #include "sortLength.h"
@@ -10,8 +13,6 @@
 #include "reverse.h"
 #include "rmRepeats.h"
 
-#include "e.h"
-#include "d_cmd.h"
 
 // print the elements in the array, up to (but not including) the first
 // NULL entry
@@ -26,14 +27,21 @@ void printLines(char** a) {
 commandMap map[] = {
   {"-rr", reverses},
   {"-p", printLines},
+
   {"-s", sortStrcmp},
   {"-l", sortLength},
   {"-u", toUpperCase},
   {"-t", trimm},
   {"-r", reverseLines},
   {"-i", rmRepeats},
-  {"-e", e},
+  {"-e", e_cmd},
   {"-d", d_cmd},
+
+
+  {"-r", reverseLines},
+  {"-i", rmRepeats},
+
+
   {NULL, NULL},
 };
 

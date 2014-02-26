@@ -1,3 +1,4 @@
+
 prog: main.o readLine.o execCmds.o reverse.o rmRepeats.o cap.o sortStrcmp.o sortLength.o e.o d_cmd.o
 	gcc -o prog main.o readLine.o execCmds.o reverse.o rmRepeats.o cap.o sortStrcmp.o sortLength.o e.o d_cmd.o
 
@@ -25,10 +26,11 @@ cap.o:	cap.c cap.h
 	gcc -c cap.c
 
 e.o: e.c e.h
-	gcc e.c
+	gcc -c e.c
 
 d_cmd.o: d_cmd.c d_cmd.h
-	gcc d_cmd.c
+	gcc -c d_cmd.c
+
 
 clean:
 	rm -f *.o prog
